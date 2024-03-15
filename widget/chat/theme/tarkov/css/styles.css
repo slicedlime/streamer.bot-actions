@@ -110,39 +110,6 @@
     color: #fff;
 }
 
-.broadcaster.msg,
-.moderator.msg {
-    flex-direction: row-reverse !important;
-    align-self: end;
-}
-
-.broadcaster .message,
-.moderator .message {
-    /* Broadcasters,Moderators will be displayed on the right*/
-    background-color: var(--message-background-color);
-    color: var(--font-color);
-    border: 1px solid #6f777d;
-    color: #fff;
-}
-
-.broadcaster .message::after,
-.moderator .message::after {
-    background-color: #191b1b;
-    border: 1px solid #6f777d;
-    position: absolute;
-    right: -5px;
-    display: block;
-    top: 15px;
-    left: unset;
-    border-bottom: 0;
-    border-left: 0;
-}
-
-.broadcaster .message .time,
-.moderator .message .time {
-    padding: 0 0 0 15px;
-}
-
 .subcriber .name {
     color: #FFD700;
 }

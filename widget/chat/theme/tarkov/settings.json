@@ -2,9 +2,9 @@
   "ticker": false,
   "animations": {
     "animation": true,
-    "hidedelay": 0,
+    "hidedelay": 180000,
     "hideAnimation": "fadeOut",
-    "showAnimation": "bounceInRight"
+    "showAnimation": "pulse"
   },
   "YouTube": {
     "defaultChatColor": "#f20000"

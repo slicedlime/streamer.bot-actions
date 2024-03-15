@@ -1,21 +1,21 @@
 {
   "websocketURL": "ws://localhost:8080/",
-  "debug": false,
-  "debugConsole": false,
+  "debug": true,
+  "debugConsole": false ,
   "debugMessageSpeed": 1000,
-  "template": "default",
+  "template": "clean",
   "ticker": false,
   "platformBadge": true,
   "blacklist": {
-    "user": [],
+    "user": ["Moobot", "slicedlimebot"],
     "words": [],
-    "commands": false
+    "commands": true
   },
   "animations": {
     "animation": true,
-    "hidedelay": 0,
+    "hidedelay": 180000,
     "hideAnimation": "fadeOut",
-    "showAnimation": "bounceInRight"
+    "showAnimation": "pulse"
   },
   "YouTube": {
     "defaultChatColor": "#f20000"

@@ -6,7 +6,6 @@
     <div class="message">
       <div class="row">
         <span class="name">{{displayName}}</span>
-        <span class="time">{{time}}</span>
       </div>
       <div class="content">{{message}}</div>
     </div>
@@ -15,10 +14,10 @@
 
 <template id="message_youtube">
   <li id="{{msgId}}" class="{{classes}}" style="--userColor:{{color}}">
+    <span class="badges">{{badges}}</span>
     <div class="message">
       <div class="row">
         <span class="name">{{displayName}}</span>
-        <span class="time">{{time}}</span>
       </div>
       <div class="content">{{message}}</div>
     </div>
@@ -31,12 +30,10 @@
     <div class="message">
       <div class="row">
         <span class="name">{{displayName}}</span>
-        <span class="time">{{time}}</span>
       </div>
-      
-      <div class="title">Oi, nerf gunner! Yeah you. I had a feeling it's one of those day where you need a little somesthing so i redeemed <strong>{{title}}</strong></div>
+
+      <div class="title">redeemed <strong>{{title}}</strong></div>
       <div class="userInput">{{message}}</div>
-      <div class="prompt">{{prompt}}</span>
     </div>
   </li>
 </template>

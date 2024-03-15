@@ -1,9 +1,10 @@
 :root {
     --message-background-color: transparent;
     --message-gap: 0px;
+    --badge-size: 28px;
     --badge-spacing: 2px;
     --emote-spacing: 2px;
-    --font-size: 16px;
+    --font-size: 24px;
     --font-color: #fff;
     --font-family: 'Roboto', sans-serif;
     --animate-duration: .3s;
@@ -20,14 +21,21 @@ body {
 .badges,
 .content,
 .time {
-    display: inline-block;
+    display: inline;
 }
 
 #chat li {
     bottom: 0;
     right: 0;
     padding: 4px 4px;
-    text-shadow: 1px 1px black;
+    text-shadow: 2px 2px black;
+}
+
+#chat .content {
+    display: block;
+    line-height: 1em;
+    gap: 5px;
+    width: 100%;
 }
 
 .reward {
@@ -37,11 +45,10 @@ body {
 .message {
     color: var(--font-color);
     font-size: var(--font-size);
-    overflow-wrap: anywhere;
 }
 
 .badges img {
-    width: var(--font-size);
+    width: var(--badge-size);
     margin-left: var(--badge-spacing);
     vertical-align: middle;
 }
@@ -49,10 +56,11 @@ body {
 .name {
     color: var(--userColor);
     font-weight: bold;
+    display: inline;
 }
 
 .content {
-    text-shadow: 1px 1px #000000c7;
+    text-shadow: 2px 2px #000000c7;
 }
 
 .emote {
