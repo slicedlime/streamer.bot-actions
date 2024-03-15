@@ -1,7 +1,10 @@
 {
   "ticker": false,
   "animations": {
-    "animation": true
+    "animation": true,
+    "hidedelay": 180000,
+    "hideAnimation": "fadeOut",
+    "showAnimation": "pulse"
   },
   "YouTube": {
     "defaultChatColor": "#f20000"

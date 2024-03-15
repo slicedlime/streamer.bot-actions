@@ -73,6 +73,7 @@ body {
   height: fit-content;
   width: fit-content;
   max-width: 100%;
+  max-height: 100%;
   position: relative;
   gap: var(--_avatar-gap);
 }
@@ -101,6 +102,7 @@ body {
   width: var(--badge-size);
   height: var(--badge-size);
   margin-left: var(--badge-spacing);
+  margin-top: var(--badge-spacing);
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;
@@ -117,12 +119,11 @@ body {
 
 #chat .content {
   display: flex;
-  text-overflow: ellipsis;
-  overflow: hidden;
   line-height: 1em;
   align-items: start;
   gap: 5px;
   width: 100%;
+  word-wrap: break-word;
 }
 
 #chat.ticker .content {
