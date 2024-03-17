@@ -225,7 +225,7 @@ function loadYTEmojis() {
 
     Object.keys(yt_emotes).forEach((emoteID) => {
         const emoteURL = `${baseEmoteURL}${yt_emotes[emoteID]}${suffix}`;
-        ytEmotes.set(emoteId, emoteURL);
+        ytEmotes.set(emoteID, emoteURL);
     });
 
     fetch('emojis/custom.json')
