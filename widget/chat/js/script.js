@@ -568,7 +568,7 @@ function chatHistory(message) {
  * @param {string} msgId
  */
 function removeMessage(msgId) {
-    console.log("Hide ID " + msgId + "in " + settings.animations.hidedelay);
+    console.log("Hide ID " + msgId + " in " + settings.animations.hidedelay);
 
     const msg = new Promise((resolve, reject) => {
         delay(settings.animations.hidedelay).then(function () {
