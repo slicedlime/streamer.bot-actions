@@ -9,7 +9,8 @@
   "blacklist": {
     "user": ["Moobot", "slicedlimebot"],
     "words": [],
-    "commands": true
+    "commands": true,
+    "single_digits": true
   },
   "animations": {
     "animation": true,

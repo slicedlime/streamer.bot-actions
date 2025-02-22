@@ -61,7 +61,8 @@ Note: If you want to use other animations check [here](https://animate.style/)
   "blacklist": {
     "user": [],
     "words": [],
-    "commands": false
+    "commands": false,
+    "single_digits": false
   },
   "animations": {
     "animation": true,

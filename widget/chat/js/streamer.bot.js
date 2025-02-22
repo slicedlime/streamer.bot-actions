@@ -48,6 +48,14 @@ function bindEvents() {
             return;
         }
 
+        if (wsdata.event.type === "ChatMessage" && settings.blacklist.single_digits && wsdata.data.message.message.length == 1) {
+            let character = wsdata.data.message.message.charAt(0);
+            if (character >= '0' && character <= '9') {
+                console.info("Blocked message because it was a single digit");
+                return;
+            }
+        }
+    
 
 
         switch (wsdata.event.source) {
