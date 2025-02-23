@@ -38,18 +38,26 @@ function bindEvents() {
         }
 
         // Blacklists
-        if (wsdata.event.type === "ChatMessage" && settings.blacklist.user.includes(wsdata.data.message.displayName) || wsdata.event.source === "RewardRedemption" && settings.blacklist.user.includes(wsdata.data.displayName)) {
+        const isChatMessage = (wsdata.event.type === "ChatMessage" || wsdata.event.type === "Message");
+        var chatText = "";
+        if (isChatMessage && wsdata.event.source === "Twitch") {
+            chatText = wsdata.data.message.message;
+        } else if (isChatMessage && wsdata.event.source === "YouTube") {
+            chatText = wsdata.data.message;
+        }
+        console.log("Type: " + wsdata.event.source + ", message: " + wsdata.data.message)
+        if (isChatMessage && settings.blacklist.user.includes(wsdata.data.message.displayName) || wsdata.event.source === "RewardRedemption" && settings.blacklist.user.includes(wsdata.data.displayName)) {
             console.info("Blocked message because display name is on blacklist!");
             return;
         }
 
-        if (wsdata.event.type === "ChatMessage" && settings.blacklist.commands === true && wsdata.data.message.message.charAt(0) === "!") {
+        if (isChatMessage && settings.blacklist.commands === true && chatText.charAt(0) === "!") {
             console.info("Blocked message because it was a command");
             return;
         }
 
-        if (wsdata.event.type === "ChatMessage" && settings.blacklist.single_digits && wsdata.data.message.message.length == 1) {
-            let character = wsdata.data.message.message.charAt(0);
+        if (isChatMessage && settings.blacklist.single_digits && chatText.length == 1) {
+            let character = chatText.charAt(0);
             if (character >= '0' && character <= '9') {
                 console.info("Blocked message because it was a single digit");
                 return;
