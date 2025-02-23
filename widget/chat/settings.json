@@ -9,6 +9,7 @@
   "blacklist": {
     "user": ["Moobot", "slicedlimebot"],
     "words": [],
+    "words_nuked": ["[Entropy Bot]"],
     "commands": true,
     "single_digits": true
   },

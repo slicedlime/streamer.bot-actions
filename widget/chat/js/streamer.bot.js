@@ -56,6 +56,16 @@ function bindEvents() {
             return;
         }
 
+        if (isChatMessage) {
+            for (let index = 0; index < settings.blacklist.words_nuked.length; index++) {
+                const string = settings.blacklist.words_nuked[index];
+                if (chatText.includes(string)) {
+                    console.info("Blocked message because it was a nuked word");
+                    return;
+                }
+            }
+        }
+
         if (isChatMessage && settings.blacklist.single_digits && chatText.length == 1) {
             let character = chatText.charAt(0);
             if (character >= '0' && character <= '9') {
